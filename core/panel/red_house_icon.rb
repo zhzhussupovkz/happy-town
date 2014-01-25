@@ -5,12 +5,11 @@
 * @copyright (c) 2014 Zhussupov Zhassulan zhzhussupovkz@gmail.com
 */
 =end
-#HouseOrange
-class HouseOrange < House
+#RedHouseIcon
+class RedHouseIcon < Icon
 
   def initialize window, x, y
-    super window, "images/houses/house-orange.png", "images/houses/house-orange-r.png", x, y
-    @cost, @ecology = 5, 1
+    super window, "images/icons/house-red.png", x, y, 2
   end
   
 end

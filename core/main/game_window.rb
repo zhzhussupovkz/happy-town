@@ -17,7 +17,9 @@ class GameWindow < Gosu::Window
     @cursor = Gosu::Image.new self, "images/cursor.png"
     self.caption = "Happy Town"
   end
-  
+
+  attr_reader :world
+
   def draw
     @world.draw
     @panel.draw

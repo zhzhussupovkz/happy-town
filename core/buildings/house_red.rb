@@ -10,7 +10,7 @@ class HouseRed < House
 
   def initialize window, x, y
     super window, "images/houses/house-red.png", "images/houses/house-red-r.png", x, y
-    @cost, @ecology = 10, 2
+    @cost, @ecology, @people = 10, 2, 5
   end
   
 end

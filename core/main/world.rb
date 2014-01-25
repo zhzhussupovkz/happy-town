@@ -5,17 +5,24 @@
 * @copyright (c) 2014 Zhussupov Zhassulan zhzhussupovkz@gmail.com
 */
 =end
-#Panel
-class Panel
+#World
+class World
 
   def initialize window
     @window = window
-    @bg = Gosu::Image.new window, 'images/panel/panel.png', true
+    @bg = Gosu::Image.new window, 'images/grass.png', true
+    @town = Town.new window
   end
 
+  attr_reader :town
+
   def draw
-    @bg.draw 0, 400, 1
+    @bg.draw 0, 0, 0
+    @town.draw
   end
-  
+
+  def update
+    @town.update
+  end
   
 end

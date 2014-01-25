@@ -12,10 +12,12 @@ class House
     @window, @left, @right, @x, @y = window, left, right, x, y
     @left = Gosu::Image.new window, left, true
     @right = Gosu::Image.new window, right, true
-    @face_left, @cost = true, 10
+    @face_left, @ecology, @cost, @people = true, 0, 10, 0
+    @drawing = true
   end
 
-  attr_reader :window, :x, :y
+  attr_reader :window, :x, :y, :cost, :ecology, :people
+  attr_accessor :drawing
   
   def draw
     if @face_left == true

@@ -5,12 +5,12 @@
 * @copyright (c) 2014 Zhussupov Zhassulan zhzhussupovkz@gmail.com
 */
 =end
-#HouseBlue
-class HouseBlue < House
+#PolicePost
+class PolicePost < House
 
   def initialize window, x, y
-    super window, "images/houses/house-blue.png", "images/houses/house-blue-r.png", x, y
-    @cost, @ecology, @people = 20, 4, 10
+    super window, "images/buildings/police-post.png", "images/buildings/police-post-r.png", x, y
+    @cost, @ecology, @people = 50, 10, 20
   end
   
 end
