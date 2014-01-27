@@ -6,7 +6,7 @@
 */
 =end
 #RedHouseIcon
-class RedHouseIcon < Icon
+class RedHouseIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/house-red.png", x, y, 2

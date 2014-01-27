@@ -28,6 +28,7 @@ class GameWindow < Gosu::Window
 
   def update
     @world.update
+    @panel.update
   end
   
   def button_down key

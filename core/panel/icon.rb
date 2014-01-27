@@ -18,5 +18,8 @@ class Icon
   def draw
     @img.draw x, y, order
   end
+
+  def update
+  end
   
 end

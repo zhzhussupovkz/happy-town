@@ -6,7 +6,7 @@
 */
 =end
 #PolicePostIcon
-class PolicePostIcon < Icon
+class PolicePostIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/police-post.png", x, y, 2

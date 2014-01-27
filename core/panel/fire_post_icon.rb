@@ -6,7 +6,7 @@
 */
 =end
 #FirePostIcon
-class FirePostIcon < Icon
+class FirePostIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/fire-post.png", x, y, 2
