@@ -18,6 +18,9 @@ class Town
 
   def add_building house
     @buildings << house
+    @money -= house.cost
+    @ecology += house.ecology
+    @population += house.people
   end
 
   def draw
@@ -25,10 +28,7 @@ class Town
   end
 
   def update
-    @buildings.each do |e|
-      @ecology += e.ecology
-      @population += e.people
-    end
+    @money = 0 if @money <= 0
     @ecology = 100 if @ecology >= 100
   end
   

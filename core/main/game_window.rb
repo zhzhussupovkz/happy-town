@@ -25,6 +25,10 @@ class GameWindow < Gosu::Window
     @panel.draw
     @cursor.draw mouse_x, mouse_y, 5
   end
+
+  def update
+    @world.update
+  end
   
   def button_down key
     case key
