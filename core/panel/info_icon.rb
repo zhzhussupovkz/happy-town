@@ -13,14 +13,19 @@ class InfoIcon < Icon
     @info = Gosu::Image.new window, img.gsub(/.png/, '-l.png'), true
     @ui = Gosu::Font.new window, 'Monaco', 25
     @get_info = false
+    @object = false
   end
 
   attr_accessor :get_info
+  attr_reader :object
 
   def draw
     super
     if @get_info == true
       @info.draw 250, 425, order
+      @ui.draw("Cost: #{object.cost}$", 325, 425, order)
+      @ui.draw("Ecology: +#{object.ecology}", 325, 445, order)
+      @ui.draw("People: +#{object.people}", 325, 465, order)
     end
   end
   

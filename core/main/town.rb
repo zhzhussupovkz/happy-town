@@ -29,6 +29,7 @@ class Town
 
   def update
     @money = 0 if @money <= 0
+    @money = 9999 if @money >= 9999
     @ecology = 100 if @ecology >= 100
   end
   

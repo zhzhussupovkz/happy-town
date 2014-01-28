@@ -41,9 +41,9 @@ class Panel < Icon
     @ui.draw("Buildings", 35, 475, 2)
     @ui.draw("My town", 710, 410, 2)
     town = window.world.town
-    @ui.draw(town.money.to_s, 740, 440, 2)
-    @ui.draw(town.ecology.to_s, 740, 480, 2)
-    @ui.draw(town.population.to_s, 740, 520, 2)
+    @ui.draw("#{town.money}$", 735, 440, 2)
+    @ui.draw(town.ecology.to_s, 735, 480, 2)
+    @ui.draw(town.population.to_s, 735, 520, 2)
     @info_icons.each do |e| e.draw end
     @main_icons.each do |e| e.draw end
     year = (Time.at(Time.now.to_i)).strftime("%Y")

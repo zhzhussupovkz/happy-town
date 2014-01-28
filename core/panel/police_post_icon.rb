@@ -10,6 +10,7 @@ class PolicePostIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/police-post.png", x, y, 2
+    @object = PolicePost.new window, x, y
   end
   
 end

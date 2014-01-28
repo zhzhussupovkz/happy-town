@@ -10,6 +10,7 @@ class HospitalIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/hospital.png", x, y, 2
+    @object = Hospital.new window, x, y
   end
   
 end
