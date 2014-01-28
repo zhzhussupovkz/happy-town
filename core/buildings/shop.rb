@@ -9,7 +9,7 @@
 class Shop < House
 
   def initialize window, x, y
-    super window, "images/buildings/shop.png", "images/buildings/shop-r.png", x, y
+    super window, "Shop", "images/buildings/shop.png", "images/buildings/shop-r.png", x, y
     @cost, @ecology, @people = 10, 5, 5
   end
   

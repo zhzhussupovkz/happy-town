@@ -9,7 +9,7 @@
 class Factory < House
 
   def initialize window, x, y
-    super window, "images/buildings/factory.png", "images/buildings/factory-r.png", x, y
+    super window, "Factory", "images/buildings/factory.png", "images/buildings/factory-r.png", x, y
     @cost, @ecology, @people = 75, -20, 20
   end
   

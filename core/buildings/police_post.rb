@@ -9,7 +9,7 @@
 class PolicePost < House
 
   def initialize window, x, y
-    super window, "images/buildings/police-post.png", "images/buildings/police-post-r.png", x, y
+    super window, "Police post", "images/buildings/police-post.png", "images/buildings/police-post-r.png", x, y
     @cost, @ecology, @people = 50, 10, 20
   end
   

@@ -9,7 +9,7 @@
 class FirePost < House
 
   def initialize window, x, y
-    super window, "images/buildings/fire-post.png", "images/buildings/fire-post-r.png", x, y
+    super window, "Fire post", "images/buildings/fire-post.png", "images/buildings/fire-post-r.png", x, y
     @cost, @ecology, @people = 50, 10, 20
   end
   

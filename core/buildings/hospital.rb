@@ -9,7 +9,7 @@
 class Hospital < House
 
   def initialize window, x, y
-    super window, "images/buildings/hospital.png", "images/buildings/hospital-r.png", x, y
+    super window, "Hospital", "images/buildings/hospital.png", "images/buildings/hospital-r.png", x, y
     @cost, @ecology, @people = 75, 10, 20
   end
   

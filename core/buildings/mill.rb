@@ -9,7 +9,7 @@
 class Mill < House
 
   def initialize window, x, y
-    super window, "images/buildings/mill.png", "images/buildings/mill-r.png", x, y
+    super window, "Mill", "images/buildings/mill.png", "images/buildings/mill-r.png", x, y
     @cost, @ecology, @people = 100, 5, 5
   end
   

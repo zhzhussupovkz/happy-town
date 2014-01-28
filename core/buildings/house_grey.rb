@@ -9,7 +9,7 @@
 class HouseGrey < House
 
   def initialize window, x, y
-    super window, "images/houses/house-grey.png", "images/houses/house-grey-r.png", x, y
+    super window, "Grey House", "images/houses/house-grey.png", "images/houses/house-grey-r.png", x, y
     @cost, @ecology, @people = 15, 3, 7
   end
   
