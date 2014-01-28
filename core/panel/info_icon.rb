@@ -24,8 +24,12 @@ class InfoIcon < Icon
     if @get_info == true
       @info.draw 250, 425, order
       @ui.draw("Cost: #{object.cost}$", 325, 425, order)
-      @ui.draw("Ecology: +#{object.ecology}", 325, 445, order)
-      @ui.draw("People: +#{object.people}", 325, 465, order)
+      if object.ecology > 0
+        @ui.draw("Ecology: +#{object.ecology}", 325, 445, order)
+      else
+        @ui.draw("Ecology: #{object.ecology}", 325, 445, order)
+      end
+      @ui.draw("People: #{object.people}", 325, 465, order)
     end
   end
   

@@ -30,6 +30,9 @@ class Panel < Icon
     add_info_icon HospitalIcon.new window, 20, 500
     add_info_icon PolicePostIcon.new window, 60, 500
     add_info_icon FirePostIcon.new window, 100, 500
+    add_info_icon MillIcon.new window, 20, 535
+    add_info_icon FactoryIcon.new window, 60, 535
+    add_info_icon ShopIcon.new window, 100, 535
     add_main_icon MoneyIcon.new window, 700, 435
     add_main_icon TreeIcon.new window, 700, 475
     add_main_icon PeopleIcon.new window, 700, 515
