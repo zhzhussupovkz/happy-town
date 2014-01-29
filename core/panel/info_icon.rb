@@ -35,5 +35,11 @@ class InfoIcon < Icon
       @build.draw 325, 515, order
     end
   end
+
+  def build_new_obj
+    if @get_info == true && 325 < window.mouse_x && window.mouse_x < 400 && 515 < window.mouse_y && window.mouse_y < 545 && (window.button_down? Gosu::MsLeft)
+      window.world.current = object
+    end
+  end
   
 end

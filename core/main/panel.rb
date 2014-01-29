@@ -63,6 +63,7 @@ class Panel < Icon
         clean
         e.get_info = true
       end
+      e.build_new_obj
     end
   end
   

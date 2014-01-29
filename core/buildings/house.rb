@@ -16,8 +16,8 @@ class House
     @drawing = true
   end
 
-  attr_reader :window, :name, :x, :y, :cost, :ecology, :people
-  attr_accessor :drawing
+  attr_reader :window, :name, :cost, :ecology, :people
+  attr_accessor :drawing, :x, :y
   
   def draw
     if @face_left == true

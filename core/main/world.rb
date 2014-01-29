@@ -12,9 +12,11 @@ class World
     @window = window
     @bg = Gosu::Image.new window, 'images/grass.png', true
     @town = Town.new window
+    @current = false
   end
 
   attr_reader :town
+  attr_accessor :current
 
   def draw
     @bg.draw 0, 0, 0

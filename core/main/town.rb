@@ -14,7 +14,7 @@ class Town
     @buildings = []
   end
 
-  attr_reader :money, :ecology, :population
+  attr_reader :window, :money, :ecology, :population
 
   def add_building house
     @buildings << house
@@ -31,6 +31,13 @@ class Town
     @money = 0 if @money <= 0
     @money = 9999 if @money >= 9999
     @ecology = 100 if @ecology >= 100
+    current = window.world.current
+    if (current != false) && 25 < window.mouse_x && window.mouse_x < 750 && 25 < window.mouse_y && window.mouse_y < 350 && (window.button_down? Gosu::MsLeft)
+      current.x = window.mouse_x
+      current.y = window.mouse_y
+      add_building current
+      window.world.current = false
+    end
   end
   
 end
