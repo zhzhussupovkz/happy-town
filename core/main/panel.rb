@@ -9,7 +9,7 @@
 class Panel < Icon
 
   def initialize window
-    super window, 'images/panel/panel.png', 0, 400, 1
+    super window, 'images/panel/panel.png', 0, 300, 1
     @info_icons, @main_icons = [], []
     @ui = Gosu::Font.new window, 'Monaco', 25
     generate_icons
@@ -24,33 +24,33 @@ class Panel < Icon
   end
 
   def generate_icons
-    add_info_icon RedHouseIcon.new window, 20, 435
-    add_info_icon BlueHouseIcon.new window, 60, 435
-    add_info_icon GreyHouseIcon.new window, 100, 435
-    add_info_icon HospitalIcon.new window, 20, 500
-    add_info_icon PolicePostIcon.new window, 60, 500
-    add_info_icon FirePostIcon.new window, 100, 500
-    add_info_icon MillIcon.new window, 20, 535
-    add_info_icon FactoryIcon.new window, 60, 535
-    add_info_icon ShopIcon.new window, 100, 535
-    add_main_icon MoneyIcon.new window, 700, 435
-    add_main_icon TreeIcon.new window, 700, 475
-    add_main_icon PeopleIcon.new window, 700, 515
+    add_info_icon RedHouseIcon.new window, 20, 335
+    add_info_icon BlueHouseIcon.new window, 60, 335
+    add_info_icon GreyHouseIcon.new window, 100, 335
+    add_info_icon HospitalIcon.new window, 20, 400
+    add_info_icon PolicePostIcon.new window, 60, 400
+    add_info_icon FirePostIcon.new window, 100, 400
+    add_info_icon MillIcon.new window, 20, 435
+    add_info_icon FactoryIcon.new window, 60, 435
+    add_info_icon ShopIcon.new window, 100, 435
+    add_main_icon MoneyIcon.new window, 550, 335
+    add_main_icon TreeIcon.new window, 550, 375
+    add_main_icon PeopleIcon.new window, 550, 415
   end
 
   def draw
     super
-    @ui.draw("Houses" , 45, 410, 2)
-    @ui.draw("Buildings", 35, 475, 2)
-    @ui.draw("My town", 710, 410, 2)
+    @ui.draw("Houses" , 45, 310, 2)
+    @ui.draw("Buildings", 35, 375, 2)
+    @ui.draw("My town", 560, 310, 2)
     town = window.world.town
-    @ui.draw("#{town.money}$", 735, 440, 2)
-    @ui.draw(town.ecology.to_s, 735, 480, 2)
-    @ui.draw(town.population.to_s, 735, 520, 2)
+    @ui.draw("#{town.money}$", 585, 340, 2)
+    @ui.draw(town.ecology.to_s, 585, 380, 2)
+    @ui.draw(town.population.to_s, 585, 420, 2)
     @info_icons.each do |e| e.draw end
     @main_icons.each do |e| e.draw end
     year = (Time.at(Time.now.to_i)).strftime("%Y")
-    @ui.draw("Copyright (c) #{year} by zhzhussupovkz", 200, 575, 2)
+    @ui.draw("Copyright (c) #{year} by zhzhussupovkz", 175, 450, 2)
   end
 
   def clean

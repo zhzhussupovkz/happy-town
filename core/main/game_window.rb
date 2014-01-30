@@ -11,7 +11,7 @@ class GameWindow < Gosu::Window
   include Singleton
 
   def initialize
-    super 800, 600, false
+    super 640, 480, false
     @world = World.new self
     @panel = Panel.new self
     @cursor = Gosu::Image.new self, "images/cursor.png"

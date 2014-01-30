@@ -22,21 +22,21 @@ class InfoIcon < Icon
   def draw
     super
     if @get_info == true
-      @info.draw 250, 450, order
-      @ui.draw("#{object.name}", 275, 425, order)
-      @ui.draw("Cost: #{object.cost}$", 325, 445, order)
+      @info.draw 250, 350, order
+      @ui.draw("#{object.name}", 275, 325, order)
+      @ui.draw("Cost: #{object.cost}$", 325, 345, order)
       if object.ecology > 0
-        @ui.draw("Ecology: +#{object.ecology}", 325, 465, order)
+        @ui.draw("Ecology: +#{object.ecology}", 325, 365, order)
       else
-        @ui.draw("Ecology: #{object.ecology}", 325, 465, order)
+        @ui.draw("Ecology: #{object.ecology}", 325, 365, order)
       end
-      @ui.draw("People: #{object.people}", 325, 485, order)
-      @build.draw 325, 515, order
+      @ui.draw("People: #{object.people}", 325, 385, order)
+      @build.draw 325, 415, order
     end
   end
 
   def build_new_obj
-    if @get_info == true && 325 < window.mouse_x && window.mouse_x < 400 && 515 < window.mouse_y && window.mouse_y < 545 && (window.button_down? Gosu::MsLeft)
+    if @get_info == true && 325 < window.mouse_x && window.mouse_x < 400 && 415 < window.mouse_y && window.mouse_y < 445 && (window.button_down? Gosu::MsLeft)
       window.world.current = object
       object = false
     end
