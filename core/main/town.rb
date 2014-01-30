@@ -33,9 +33,9 @@ class Town
     @ecology = 100 if @ecology >= 100
     @ecology = 0 if @ecology <= 0
     current = window.world.current
-    if (current != false) && 25 < window.mouse_x && window.mouse_x < 600 && 25 < window.mouse_y && window.mouse_y < 250 && (window.button_down? Gosu::MsLeft)
-      current.x = window.mouse_x
-      current.y = window.mouse_y
+    if (current != false) && 25 < window.mouse_x && window.mouse_x < 600 && 25 < window.mouse_y && window.mouse_y < 275 && (window.button_down? Gosu::MsLeft)
+      current.x = window.mouse_x - 10
+      current.y = window.mouse_y - 10
       add_building current
       window.world.current = false
     end

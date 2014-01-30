@@ -13,10 +13,11 @@ class House
     @left = Gosu::Image.new window, left, true
     @right = Gosu::Image.new window, right, true
     @face_left, @ecology, @cost, @people = true, 0, 10, 0
+    @strength, @green, @red= 100, Gosu::Color.argb(0xff00ff00), Gosu::Color.argb(0xffff0000)
     @drawing = true
   end
 
-  attr_reader :window, :name, :cost, :ecology, :people
+  attr_reader :window, :name, :cost, :ecology, :people, :green, :red, :strength
   attr_accessor :drawing, :x, :y
   
   def draw
@@ -25,6 +26,8 @@ class House
     else
       @right.draw x, y, 1
     end
+    window.draw_line(x + 4, y - 5, green, x + 4 + strength/4, y - 5, green, 1, mode = :default)
+    window.draw_line(x + 4 + strength/4, y - 5, red, x + 29, y - 5, red, 1, mode = :default)
   end
   
 end

@@ -12,6 +12,7 @@ class Panel < Icon
     super window, 'images/panel/panel.png', 0, 300, 1
     @info_icons, @main_icons = [], []
     @ui = Gosu::Font.new window, 'Monaco', 25
+    @c = Gosu::Font.new window, 'Monaco', 15
     generate_icons
   end
 
@@ -50,7 +51,7 @@ class Panel < Icon
     @info_icons.each do |e| e.draw end
     @main_icons.each do |e| e.draw end
     year = (Time.at(Time.now.to_i)).strftime("%Y")
-    @ui.draw("Copyright (c) #{year} by zhzhussupovkz", 175, 450, 2)
+    @c.draw("Copyright (c) #{year} by zhzhussupovkz", 400, 460, 2)
   end
 
   def clean
