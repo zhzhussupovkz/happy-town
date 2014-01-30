@@ -13,7 +13,7 @@ class HospitalIcon < InfoIcon
   end
 
   def draw
-    @object = Hospital.new window, 0, 0
+    @object = Hospital.new window, 0, 0 if @get_info
     super
   end
   

@@ -13,7 +13,7 @@ class GreyHouseIcon < InfoIcon
   end
 
   def draw
-    @object = HouseGrey.new window, 0, 0
+    @object = HouseGrey.new window, 0, 0  if @get_info
     super
   end
   

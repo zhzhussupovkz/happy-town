@@ -13,7 +13,7 @@ class FirePostIcon < InfoIcon
   end
   
   def draw
-    @object = FirePost.new window, 0, 0
+    @object = FirePost.new window, 0, 0 if @get_info
     super
   end
 end

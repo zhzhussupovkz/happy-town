@@ -13,7 +13,7 @@ class ShopIcon < InfoIcon
   end
 
   def draw
-    @object = Shop.new window, 0, 0
+    @object = Shop.new window, 0, 0 if @get_info
     super
   end
   

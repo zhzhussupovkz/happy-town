@@ -13,7 +13,7 @@ class FactoryIcon < InfoIcon
   end
 
   def draw
-    @object = Factory.new window, 0, 0
+    @object = Factory.new window, 0, 0 if @get_info
     super
   end
   

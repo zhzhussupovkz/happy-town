@@ -13,7 +13,7 @@ class PolicePostIcon < InfoIcon
   end
 
   def draw
-    @object = PolicePost.new window, 0, 0
+    @object = PolicePost.new window, 0, 0  if @get_info
     super
   end
   

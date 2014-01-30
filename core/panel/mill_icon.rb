@@ -13,7 +13,7 @@ class MillIcon < InfoIcon
   end
 
   def draw
-    @object = Mill.new window, 0, 0
+    @object = Mill.new window, 0, 0 if @get_info
     super
   end
   
