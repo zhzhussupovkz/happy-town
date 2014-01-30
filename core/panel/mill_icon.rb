@@ -10,7 +10,11 @@ class MillIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/mill.png", x, y, 2
-    @object = Mill.new window, x, y
+  end
+
+  def draw
+    @object = Mill.new window, 0, 0
+    super
   end
   
 end

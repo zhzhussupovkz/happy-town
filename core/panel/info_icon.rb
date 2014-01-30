@@ -17,8 +17,7 @@ class InfoIcon < Icon
     @object = false
   end
 
-  attr_accessor :get_info
-  attr_reader :object
+  attr_accessor :get_info, :object
 
   def draw
     super
@@ -39,6 +38,7 @@ class InfoIcon < Icon
   def build_new_obj
     if @get_info == true && 325 < window.mouse_x && window.mouse_x < 400 && 515 < window.mouse_y && window.mouse_y < 545 && (window.button_down? Gosu::MsLeft)
       window.world.current = object
+      object = false
     end
   end
   

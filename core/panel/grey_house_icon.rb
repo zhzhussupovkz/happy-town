@@ -10,7 +10,11 @@ class GreyHouseIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/house-grey.png", x, y, 2
-    @object = HouseGrey.new window, x, y
+  end
+
+  def draw
+    @object = HouseGrey.new window, 0, 0
+    super
   end
   
 end

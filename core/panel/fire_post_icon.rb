@@ -10,7 +10,10 @@ class FirePostIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/fire-post.png", x, y, 2
-    @object = FirePost.new window, x, y
   end
   
+  def draw
+    @object = FirePost.new window, 0, 0
+    super
+  end
 end

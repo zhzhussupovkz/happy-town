@@ -10,7 +10,11 @@ class ShopIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/shop.png", x, y, 2
-    @object = Shop.new window, x, y
+  end
+
+  def draw
+    @object = Shop.new window, 0, 0
+    super
   end
   
 end

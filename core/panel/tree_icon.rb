@@ -11,5 +11,5 @@ class TreeIcon < Icon
   def initialize window, x, y
     super window, "images/panel/tree.png", x, y, 2
   end
-  
+
 end

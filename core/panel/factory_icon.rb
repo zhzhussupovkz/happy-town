@@ -10,7 +10,11 @@ class FactoryIcon < InfoIcon
 
   def initialize window, x, y
     super window, "images/icons/factory.png", x, y, 2
-    @object = Factory.new window, x, y
+  end
+
+  def draw
+    @object = Factory.new window, 0, 0
+    super
   end
   
 end
