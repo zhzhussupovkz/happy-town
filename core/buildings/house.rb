@@ -15,10 +15,11 @@ class House
     @face_left, @ecology, @cost, @people = true, 0, 10, 0
     @strength, @green, @red= 100, Gosu::Color.argb(0xff00ff00), Gosu::Color.argb(0xffff0000)
     @drawing = true
+    @health, @crime, @arch = 100, 0, 100
   end
 
   attr_reader :window, :name, :cost, :ecology, :people, :green, :red, :strength
-  attr_accessor :drawing, :x, :y
+  attr_accessor :drawing, :x, :y, :health, :crime, :arch
   
   def draw
     if @face_left == true
